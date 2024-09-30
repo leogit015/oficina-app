@@ -14,6 +14,7 @@ return new class extends Migration
         Schema::create('revisoes', function (Blueprint $table) {
             $table->id();
             $table->foreignId('veiculo_id')->constrained('veiculos')->onDelete('cascade');
+            $table->foreignId('pessoa_id')->constrained('pessoas')->onDelete('cascade');
             $table->date('data_revisao');
             $table->text('descricao')->nullable();
             $table->integer('km_atual');

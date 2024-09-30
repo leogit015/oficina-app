@@ -13,7 +13,8 @@ class Veiculo extends Model
     protected $table = 'veiculos';
 
     
-    protected $fillable = ['modelo', 'marca', 'pessoa_id'];
+    protected $fillable = ['modelo', 'marca', 'pessoa_id', 'ano', 'placa'];
+
 
    
     public function pessoa()
